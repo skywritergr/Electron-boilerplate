@@ -89,7 +89,8 @@ app.on('activate', async () => {
 	Menu.setApplicationMenu(menu);
 	mainWindow = await createMainWindow();
 
-	const favoriteAnimal = config.get('favoriteAnimal');
+	// This is how to use the bundled electron-store
+	// const favoriteAnimal = config.get('favoriteAnimal');
 	mainWindow.loadURL(
     isDev
       ? 'http://localhost:9000'
